@@ -15,6 +15,7 @@
 		0AECE8DE1C29444000E2F5C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AECE8DC1C29444000E2F5C8 /* LaunchScreen.storyboard */; };
 		0AECE8E91C29444000E2F5C8 /* TaipeiZooAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AECE8E81C29444000E2F5C8 /* TaipeiZooAPITests.swift */; };
 		0AECE8F41C29444000E2F5C8 /* TaipeiZooAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AECE8F31C29444000E2F5C8 /* TaipeiZooAPIUITests.swift */; };
+		0AECE9021C29592900E2F5C8 /* relax.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AECE9011C29592900E2F5C8 /* relax.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0AECE8EF1C29444000E2F5C8 /* TaipeiZooAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaipeiZooAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AECE8F31C29444000E2F5C8 /* TaipeiZooAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaipeiZooAPIUITests.swift; sourceTree = "<group>"; };
 		0AECE8F51C29444000E2F5C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AECE9011C29592900E2F5C8 /* relax.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = relax.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				0AECE8D51C29444000E2F5C8 /* DetailViewController.swift */,
 				0AECE8D71C29444000E2F5C8 /* Main.storyboard */,
 				0AECE8DA1C29444000E2F5C8 /* Assets.xcassets */,
+				0AECE9011C29592900E2F5C8 /* relax.jpg */,
 				0AECE8DC1C29444000E2F5C8 /* LaunchScreen.storyboard */,
 				0AECE8DF1C29444000E2F5C8 /* Info.plist */,
 			);
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AECE9021C29592900E2F5C8 /* relax.jpg in Resources */,
 				0AECE8DE1C29444000E2F5C8 /* LaunchScreen.storyboard in Resources */,
 				0AECE8DB1C29444000E2F5C8 /* Assets.xcassets in Resources */,
 				0AECE8D91C29444000E2F5C8 /* Main.storyboard in Resources */,

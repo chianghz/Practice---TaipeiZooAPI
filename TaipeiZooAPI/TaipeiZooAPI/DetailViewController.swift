@@ -8,10 +8,13 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController , NSURLSessionDelegate, NSURLSessionDownloadDelegate{
 
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    
+    
+    var thisAnimalDic:AnyObject?
 
     var detailItem: AnyObject? {
         didSet {
@@ -31,8 +34,24 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
+        
+        //取得圖片網址
+        let url = (thisAnimalDic as! [String:AnyObject])["A_Pic01_URL"]
+        
+        if let url = url //如果有圖片網址，向伺服器請求圖片資料
+        {
+            let sessionWithConfigure = NSURLSessionConfiguration.defaultSessionConfiguration()
+            
+            let session = NSURLSession(configuration: sessionWithConfigure, delegate: self, delegateQueue: NSOperationQueue.mainQueue())
+            
+            let dataTask = session.downloadTaskWithURL(NSURL(string: url as! String)!)
+            
+            dataTask.resume()
+        }
+        
+        detailDescriptionLabel.text = (thisAnimalDic as! [String:AnyObject])["A_Name_Ch"] as? String
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +59,16 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didFinishDownloadingToURL location: NSURL) {
+        
+        guard let imageData = NSData(contentsOfURL: location) else {
+            return
+        }
+        
+        imageView.image = UIImage(data: imageData)
+    }
+    
 
 }
 
